@@ -23,7 +23,7 @@ This plugin uses [geotiff.js](https://github.com/constantinius/geotiff.js) and [
 2. Add a WCS layer `L.nonTiledLayer.wcs(url,options)`
   * `url` - WCS url, e.g. `https://domain.org/cgi-bin/server_path?`
   * `options`:
-    * `wcsOptions`: an object containing options for WCS the query, e.g. `{version: '1.0.0',}`
+    * `wcsOptions`: an object containing options for the WCS query, e.g. `{version: '1.0.0',}`
     * `displayMin`,`displayMax` - Minimum and maximum values to plot.
     * `clampLow`, `clampHigh` - (optional, default = true) If true values outside `displayMin` to `displayMax` will be rendered as if they were valid values.
     * `band` - (optional, default = 0) geoTIFF band to read.   
@@ -37,7 +37,7 @@ This plugin uses [geotiff.js](https://github.com/constantinius/geotiff.js) and [
 
 ## Dependencies
 
-  * leaflet-geotiff works with Leaflet 0.7.7 and >=1.0
+  * Leaflet.NonTiledLayer.WCS works with Leaflet 0.7.7 and >=1.0
   * Requires:
     * [Leaflet.NonTiledLayer](https://github.com/ptv-logistics/Leaflet.NonTiledLayer)
     * [geotiff.js](https://github.com/constantinius/geotiff.js)
