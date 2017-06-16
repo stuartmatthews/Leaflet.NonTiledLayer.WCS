@@ -94,6 +94,9 @@ L.NonTiledLayer.WCS = L.NonTiledLayer.extend({
         return this.raster.data[i];
     },
     _getData: function(url) {
+        if (this._map) {
+            this._map.fire('wcsloading');
+        }
         var self = this;
         var request = new XMLHttpRequest();
         request.onload = function(i) {
@@ -108,6 +111,7 @@ L.NonTiledLayer.WCS = L.NonTiledLayer.extend({
     },
     _parseTIFF: function (arrayBuffer) {
         this.tiff = GeoTIFF.parse(arrayBuffer);
+        this._map.fire('wcsloaded');
         
         if (typeof(this.options.image)=='undefined') {
             this.options.image = 0;

@@ -30,10 +30,12 @@ This plugin uses [geotiff.js](https://github.com/constantinius/geotiff.js) and [
     * `image` - (optional, default = 0) geoTIFF image to read.    
     * `colorScale` - (optional, default = "rainbow").  Plotty color scale used to render the image.
     * `useCanvas` - (optional).  If available use a canvas element to render the images
-    
-3. Data values can be extracted using the `getValueAtPoint(e.containerPoint)` method.
+ 
+3. Because WCS servers can be slow to respond, the layer fires a `wcsloading` event when data is requested and `wcsloaded` when the data arrives.
+ 
+4. Data values can be extracted using the `getValueAtPoint(e.containerPoint)` method.
 
-4. New color scales can be created using plotty's addColorScale method.
+5. New color scales can be created using plotty's addColorScale method.
 
 ## Dependencies
 
